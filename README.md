@@ -1,9 +1,9 @@
 Conway's Game of Life
 =====
 ![Screenshot of Game](screenshot.png)
-> An implementation of Conways' Game of Life, created for 6.170 - Software Studio
+> An implementation of [Conway's Game of Life](http://en.wikipedia.org/wiki/Conway%27s_Game_of_Life), created for 6.170 - Software Studio
 
 ## Running the Game
+Play around with the game [here!](http://www.tamiforrester.com/projects/gameoflife/)
 
-Download all files, and open the index.html file in the root directory.
-The game will start onload! Tested in latest versions of Chrome, Safari, and Firefox. Performs best in Chrome.
+The game will initialize onload. Tested in latest versions of Chrome, Safari, and Firefox. Performs best in Chrome.
