@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Conway's Game of Life</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700,300' rel='stylesheet' type='text/css'>
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <div class="container">
+      <h2>Conway's Game of Life</h2>
+
+      <div id="board_wrapper" class>
+        <div id="board"><i class="fa fa-spinner fa-spin"></i> Loading!</div>
+      </div>
+      <ul id="options">
+        <li><a id="play" href="#" class="btn btn-default"><i class="fa fa-fw fa-play"></i>&nbsp;Play</a></li>
+        <li><a id="pause" href="#" class="btn btn-default disabled"><i class="fa fa-fw fa-pause"></i>&nbsp;Pause</a></li>
+        <li><a id="step" href="#" class="btn btn-default"><i class="fa fa-fw fa-step-forward"></i>&nbsp;Step</a></li>
+        <li><a id="reset" href="#" class="btn btn-default"><i class="fa fa-fw fa-refresh"></i>&nbsp;Restart</a></li>
+      </ul>
+      <div class="col-xs-2 center-block" id="selectWrapper">
+        <label for="board_config" class>Starting Board:</label>
+        <select class="form-control" id="board_config">
+          <option value="beacon" id="beacon">Beacon Board</option>
+          <option value="blinker" id="blinker">Blinker Board</option>
+          <option value="glider" id="glider">Glider Board</option>
+          <option value="random" id="random">Random Board</option>
+          <option value="blank" id="blank">Blank Board</option>
+        </select>
+      </div>
+      <div class="col-xs-2 center-block" id="speedWrapper">
+      <label for="speed">Speed (ms):</label>
+      <input id="speed" type="number" class="form-control">
+      </div>
+    </div>
+    <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="js/board.js"></script>
+    <script type="text/javascript" src="js/boardView.js"></script>
+    <script type="text/javascript" src="js/game.js"></script>
+  </body>
+  <script type="text/javascript">
+  (function() {
+    // Initialize the game!
+    var game = GameofLife($('#board')[0]);
+    game.init();
+  })();
+  </script>
+</html>
